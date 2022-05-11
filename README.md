@@ -15,9 +15,9 @@
 </html>
 ```
 
-be-adopted plays by the same rule-book as [be-loaded](https://github.com/bahrus/be-loaded).  The difference is be-loaded adds style to the shadowDOM it belongs to.
+be-adopted plays by the same rule-book as [be-loaded](https://github.com/bahrus/be-loaded).  The difference is be-loaded adds style to the shadow DOM realm it belongs to.
 
-be-adopted does the following:
+be-adopted, instead, does the following:
 
 1.  It adds itself to the shadowRoot of the parent element.
 2.  It changes its attribute from be-adopted to be-loaded.
