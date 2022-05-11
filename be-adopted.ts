@@ -3,7 +3,8 @@ import {register} from 'be-hive/register.js';
 import {BeAdoptedActions, BeAdoptedProps, BeAdoptedVirtualProps} from './types';
 
 export class BeAdopted implements BeAdoptedActions{
-    async intro(proxy: HTMLStyleElement & BeAdoptedVirtualProps, target: HTMLStyleElement): void {
+    async intro(proxy: HTMLStyleElement & BeAdoptedVirtualProps, target: HTMLStyleElement){
+        import('be-loaded/be-loaded.js');
         const parent = target.parentElement;
         if(parent === null) return;
         if(parent.shadowRoot !== null){

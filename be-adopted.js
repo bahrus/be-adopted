@@ -2,6 +2,7 @@ import { define } from 'be-decorated/be-decorated.js';
 import { register } from 'be-hive/register.js';
 export class BeAdopted {
     async intro(proxy, target) {
+        import('be-loaded/be-loaded.js');
         const parent = target.parentElement;
         if (parent === null)
             return;
