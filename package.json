@@ -1,6 +1,6 @@
 {
   "name": "be-adopted",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "be-adopted.js",
   "module": "be-adopted.js",
@@ -12,11 +12,11 @@
     "preload",
     "css-modules"
   ],
-  "exports":{
+  "exports": {
     ".": "./be-adopted.js",
     "./be-adopted.js": "./be-adopted.js"
   },
-  "files":[
+  "files": [
     "*.*",
     "demo/*.*"
   ],
