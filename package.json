@@ -2,7 +2,25 @@
   "name": "be-adopted",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "be-adopted.js",
+  "module": "be-adopted.js",
+  "keywords": [
+    "web-components",
+    "web-component",
+    "custom-element",
+    "custom-elements",
+    "preload",
+    "css-modules"
+  ],
+  "exports":{
+    ".": "./be-adopted.js",
+    "./be-adopted.js": "./be-adopted.js"
+  },
+  "files":[
+    "*.*",
+    "demo/*.*"
+  ],
+  "types": "types.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node node_modules/may-it-serve/serve.js",
