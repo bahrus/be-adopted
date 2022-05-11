@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "be-decorated": "0.0.114",
-    "be-loaded": "0.0.64"
+    "be-loaded": "0.0.66"
   },
   "devDependencies": {
     "may-it-serve": "0.0.0",
