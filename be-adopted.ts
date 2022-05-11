@@ -21,6 +21,9 @@ export class BeAdopted implements BeAdoptedActions{
     }
 
     addToShadowRoot(shadowRoot: ShadowRoot, target: HTMLStyleElement): void {
+        shadowRoot.appendChild(target);
+        //TODO -- use ifWantToBe's
+        target.setAttribute('be-loaded', target.getAttribute('is-adopted')!);
     }
 }
 
