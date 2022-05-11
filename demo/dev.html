@@ -9,15 +9,15 @@
 <body>
     <my-web-component>
         <template shadowroot='open'>
-            <style  be-loaded='{
-                "path": "be-loaded/demo/dev.css",
-                "CDNFallback": "https://unpkg.com/",
-                "version": "1.2.3"
-            }'></style>
+            <slot name='header'></slot>
             <div>hello</div>
             <be-hive></be-hive>
         </template>
-        
+        <style slot='header' be-adopted='{
+            "path": "be-loaded/demo/dev.css",
+            "CDNFallback": "https://unpkg.com/",
+            "version": "1.2.3"
+        }'></style>
       </my-web-component>
     <script async src="https://ga.jspm.io/npm:es-module-shims@1.5.4/dist/es-module-shims.js"></script>
     <script type='importmap'>
