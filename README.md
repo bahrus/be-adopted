@@ -1,10 +1,10 @@
-# be-adopted
+# be-adopted [TODO]
 
 ```html
 <html>
     <head>
         ...
-        <link rel=preload id=@my-package/my-web-component/my-styles.css integrity=...>
+        <link be-preemptive rel=preload id=@my-package/my-web-component/my-styles.css integrity=...>
     </head>
     <body>
         ...
@@ -23,3 +23,9 @@ be-adopted, instead, does the following:
 2.  It changes its attribute from be-adopted to be-loaded.
 
 So if my-web-component's internal shadowDOM opts in to incorporate be-loaded, it will "adopt" the styles.
+
+## Why?
+
+**The strong case:**  Sometimes a web component is specifically designed to allow the consumer to provide templates that are used within its shadow DOM.  This component provides a common usage pattern for specifying styles as well.
+
+**The weak case:** Sometimes a web component doesn't provide enough flexibility as far as styling.  This component can help in a pinch.
