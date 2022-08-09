@@ -9,5 +9,4 @@ export interface BeAdoptedProps extends BeAdoptedVirtualProps{
 
 export interface BeAdoptedActions{
     intro(proxy: HTMLStyleElement & BeLoadedVirtualProps, target: HTMLStyleElement, beDecor: BeDecoratedProps): void;
-    
 }
