@@ -2,20 +2,24 @@ import {define, BeDecoratedProps} from 'be-decorated/be-decorated.js';
 import {register} from 'be-hive/register.js';
 import {BeAdoptedActions, BeAdoptedProps, BeAdoptedVirtualProps} from './types';
 
-export class BeAdopted implements BeAdoptedActions{
+export class BeAdopted extends EventTarget implements BeAdoptedActions{
     async intro(proxy: HTMLStyleElement & BeAdoptedVirtualProps, target: HTMLStyleElement){
         import('be-loaded/be-loaded.js');
         const parent = target.parentElement;
         if(parent === null) return;
         if(parent.shadowRoot !== null){
             this.addToShadowRoot(parent.shadowRoot, target);
+            proxy.resolved = true;
         }else{
             await customElements.whenDefined(parent.localName);
             requestIdleCallback(() => {
                 if(parent.shadowRoot !== null){
                     this.addToShadowRoot(parent.shadowRoot, target);
+                    proxy.resolved = true;
                 }else{
-                    throw new Error('ShadowRoot not found');
+                    const msg = 'ShadowRoot not found.'
+                    proxy.rejected = msg;
+                    throw new Error(msg);
                 }
             });
         }

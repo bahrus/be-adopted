@@ -1,4 +1,4 @@
-import {BeDecoratedProps} from 'be-decorated/types';
+import {BeDecoratedProps, MinimalProxy} from 'be-decorated/types';
 import {BeLoadedVirtualProps} from 'be-loaded/types';
 
 export interface BeAdoptedVirtualProps extends BeLoadedVirtualProps{}

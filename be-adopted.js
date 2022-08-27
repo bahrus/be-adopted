@@ -1,6 +1,6 @@
 import { define } from 'be-decorated/be-decorated.js';
 import { register } from 'be-hive/register.js';
-export class BeAdopted {
+export class BeAdopted extends EventTarget {
     async intro(proxy, target) {
         import('be-loaded/be-loaded.js');
         const parent = target.parentElement;
@@ -8,15 +8,19 @@ export class BeAdopted {
             return;
         if (parent.shadowRoot !== null) {
             this.addToShadowRoot(parent.shadowRoot, target);
+            proxy.resolved = true;
         }
         else {
             await customElements.whenDefined(parent.localName);
             requestIdleCallback(() => {
                 if (parent.shadowRoot !== null) {
                     this.addToShadowRoot(parent.shadowRoot, target);
+                    proxy.resolved = true;
                 }
                 else {
-                    throw new Error('ShadowRoot not found');
+                    const msg = 'ShadowRoot not found.';
+                    proxy.rejected = msg;
+                    throw new Error(msg);
                 }
             });
         }

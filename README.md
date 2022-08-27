@@ -1,5 +1,11 @@
 # be-adopted
 
+<a href="https://nodei.co/npm/be-adopted/"><img src="https://nodei.co/npm/be-adopted.png"></a>
+
+[![How big is this package in your project?](https://img.shields.io/bundlephobia/minzip/be-adopted?style=for-the-badge)](https://bundlephobia.com/result?p=be-adopted)
+
+<img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/be-adopted?compression=gzip">
+
 be-adopted is an HTML style tag decorator / behavior based on the [be-decorated](https://github.com/bahrus/be-decorated) approach to progressively enhancing elements.
 
 ```html
