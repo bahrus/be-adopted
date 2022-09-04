@@ -1,9 +1,9 @@
 import {define, BeDecoratedProps} from 'be-decorated/be-decorated.js';
 import {register} from 'be-hive/register.js';
-import {BeAdoptedActions, BeAdoptedProps, BeAdoptedVirtualProps} from './types';
+import {BeAdoptedActions, BeAdoptedVirtualProps, PP, Proxy} from './types';
 
 export class BeAdopted extends EventTarget implements BeAdoptedActions{
-    async intro(proxy: HTMLStyleElement & BeAdoptedVirtualProps, target: HTMLStyleElement){
+    async intro(proxy: Proxy, target: HTMLStyleElement){
         import('be-loaded/be-loaded.js');
         const parent = target.parentElement;
         if(parent === null) return;
@@ -32,7 +32,6 @@ export class BeAdopted extends EventTarget implements BeAdoptedActions{
     }
 }
 
-export interface BeAdopted extends BeAdoptedProps{}
 
 const tagName = 'be-adopted';
 
@@ -40,7 +39,7 @@ const ifWantsToBe = 'adopted';
 
 const upgrade = 'style';
 
-define<BeAdoptedProps & BeDecoratedProps<BeAdoptedProps, BeAdoptedActions>, BeAdoptedActions>({
+define<BeAdoptedVirtualProps & BeDecoratedProps<BeAdoptedVirtualProps, BeAdoptedActions>, BeAdoptedActions>({
     config:{
         tagName,
         propDefaults:{
