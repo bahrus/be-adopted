@@ -1,18 +1,18 @@
 import {BeDecoratedProps, MinimalProxy} from 'be-decorated/types';
-import {BeLoadedVirtualProps} from 'be-loaded/types';
+import {VirtualProps as BeLoadedVirtualProps} from 'be-loaded/types';
 
-export interface BeAdoptedEndUserProps{}
+export interface EndUserProps{}
 
-export interface BeAdoptedVirtualProps extends BeLoadedVirtualProps{}
+export interface VirtualProps extends BeLoadedVirtualProps{}
 
-export type Proxy = HTMLStyleElement & BeAdoptedVirtualProps;
+export type Proxy = HTMLStyleElement & VirtualProps;
 
-export interface ProxyProps extends BeAdoptedVirtualProps{
+export interface ProxyProps extends VirtualProps{
     proxy: Proxy;
 }
 
 export type PP = ProxyProps;
 
-export interface BeAdoptedActions{
+export interface Actions{
     intro(proxy: Proxy, target: HTMLStyleElement, beDecor: BeDecoratedProps): void;
 }
