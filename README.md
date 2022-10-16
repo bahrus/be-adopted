@@ -8,6 +8,8 @@
 
 be-adopted is an HTML style tag decorator / behavior based on the [be-decorated](https://github.com/bahrus/be-decorated) approach to progressively enhancing elements.
 
+[![Playwright Tests](https://github.com/bahrus/be-adopted/actions/workflows/CI.yml/badge.svg?branch=baseline)](https://github.com/bahrus/be-adopted/actions/workflows/CI.yml)
+
 ```html
 <html>
     <head>
