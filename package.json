@@ -22,17 +22,18 @@
   ],
   "types": "types.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "playwright test",
     "serve": "node node_modules/may-it-serve/serve.js",
     "package-check": "package-check"
   },
   "dependencies": {
-    "be-decorated": "0.0.153",
-    "be-loaded": "0.0.85"
+    "be-decorated": "0.0.180",
+    "be-loaded": "0.0.89"
   },
   "devDependencies": {
-    "may-it-serve": "0.0.2",
-    "@skypack/package-check": "0.2.2"
+    "may-it-serve": "0.0.3",
+    "@skypack/package-check": "0.2.2",
+    "@playwright/test": "1.27.1"
   },
   "repository": {
     "type": "git",
